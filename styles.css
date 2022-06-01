@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+}
+
+nav{
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+nav ul li a:is(:link,:active,:visited){
+    color: #000;
+    text-decoration: none;
+}
+
+nav ul li a:is(:link,:active,:visited).active{
+    color:white;
+    background-color: #000;
+}
+nav ul li a:hover{
+    color: red;
+}
+
+.detel{
+    margin-left: 32%;
+    margin-top: 10%;
+}
+
+.detel h1{
+    font-size: 60px;
+    color: #e1e1e1;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    line-height: 0.7em;
+    outline: none;
+    animation: animate 5s linear infinite ;
+}
+.detel span{
+    color: rgb(0, 0, 0);
+}
+@keyframes animate{
+    0%,18%,20%,50%,65%,80%,90%{
+        color: #ffffff;
+        text-shadow: none;
+    }
+    18%,20%,50%,65%,80%,90%,100%{
+        color: white;
+        text-shadow: 0 0 5px rgb(255, 74, 74),
+        0 0 10px rgb(255, 74, 74),
+        0 0 15px rgb(255, 74, 74),
+        0 0 20px rgb(255, 74, 74),
+        0 0 30px rgb(255, 74, 74);
+    }
+}
+
+.detel p{
+    color: #555;
+    line-height: 22px;
+    padding-top:30px;
+}
+
+.detel a{
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 30px 200px;
+    border-radius: 5px;
+}
+.detel a:hover{
+    color: orange;
+}
+.social{
+    margin-left: 44.5%;
+    margin-top: 5px;
+}
+
+.social a{
+    font-size: 30px;
+    color: #212121;
+    margin-right: 20px;
+}
+
+.social a:hover{
+    color: orange;
+}
+
+.footer{
+    width: 100%;
+    height: 200px;
+    bottom: 300px;
+    background-color: orange;
+}
+.footer p{
+    color: black;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin-left: 100px;
+    padding-top: 60px;
+}
+.footer h1{
+    font-size: 14px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+@media screen and (max-width:427px) {
+    .detel a{
+        margin: 0;
+
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 14px;
+    }
+    
+    .social-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .social{
+        display: flex;
+        margin: 6px;
+    }
+    .detel{
+        margin:10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .cv{
+        margin-right: 200px;
+    }
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
+    nav ul li a{
+        padding-right: 10px;
+    }
+    .detel p{
+        padding-right: 10px;
+    }
+    .detel a{
+        margin-top: 20px;
+        margin-right: 30px;
+    }
+    .social{
+        margin-right: 20px;
+    }
+    .footer p{
+        margin-right: 100px;
+        font-size: small;
+    }
+    .footer h1{
+        font-size: small;
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width:377px){
+    .logo{
+        width: 60px;
+        height: 60px;
+    }
+    
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 13px;
+    }
+    nav ul li a{
+        padding-right: 1px;
+    }
+    .footer p{
+        margin-right: 20%;
+    }
+}
+@media screen and (max-width:322px){
+    .logo{
+        width: 60px;
+        height: 60px;
+    }
+    .detel h1{
+        color: red;
+        padding-top: 10px;
+        font-size: 50px;
+    }
+    .detel span{
+        padding-top: 200px;
+    }
+    nav ul li a{
+        padding-right: 2px;
+        margin-right:1px;
+    }
+}
